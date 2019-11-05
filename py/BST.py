@@ -33,6 +33,18 @@ class BST:
         while startNode.left is not None:
             startNode = startNode.left
         return startNode.data
+    
+    def checkValid(self):
+        minV = -200000
+        maxV = 200000
+        return self._checkValid(self.root, minV, maxV)
+
+    def _checkValid(self, currentNode, minV, maxV):
+        if currentNode == None:
+            return True
+        return currentNode.data >= minV and currentNode.data <= maxV and self._checkValid(currentNode.left, minV, currentNode.data) and self._checkValid(currentNode.right, currentNode.data, maxV)
+
+
 
 bst = BST()
 bst.addNode(5)
@@ -46,5 +58,8 @@ print(bst.findMin())
 bst.addNode(1)
 
 print(bst.findMin())
+
+result = bst.checkValid()
+print('hi')
 
 
