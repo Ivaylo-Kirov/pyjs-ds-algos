@@ -28,5 +28,11 @@ def climbStairs(n):
     result = _climbStairs(n, 0)
     return result
 
-result = climbStairs(4)
+result = climbStairs(5)
 print('hi')
+
+# imagine you are on the last steps, where you can manually calculate the result
+# that ends up being your base case, and from there you just add those numbers down, similar to fibonacci
+# 1 + 2 manual
+# next step down made 2 recursive calls... first one returned 1, second one returned 2...
+# the result is 3, stack gets popped, and remaining stairs below now can do their sum as well
