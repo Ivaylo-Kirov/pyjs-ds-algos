@@ -7,7 +7,7 @@ def countBits(value):
     num_bits = 0
     while value:
         num_bits += value & 1
-        value >>= 1 # this turns "1 1 0 0" into "1 1 0"
+        value >>= 1 # this turns "1 1 0 0" into "1 1 0", but not because it 'deletes' a bit, but because >> is leftshift operator which essentially does "divide by 2"
     return num_bits
 
 result = countBits(12)
