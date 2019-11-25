@@ -1,6 +1,6 @@
 def letterCasePermutation(S):
     # empty list with one char
-    result = ['']
+    res = ['']
     # iterate
     for ch in S:
         if ch.isalpha():
@@ -15,3 +15,8 @@ def letterCasePermutation(S):
 result = letterCasePermutation("a1b2")
 
 #["a1b2", "a1B2", "A1b2", "A1B2"]
+
+
+# this didn't make any sense at first 'copied from leetcode answers'
+# but later I read it again after I understood how the 'product' of 2 values can be done in a list comprehension
+# and so it kind of dinged

@@ -1,11 +1,8 @@
 def longestPalindromeSubseq(s):
-    
     result = 0
 
     # squeeze and recurse on (start + 1) and (end - 1) routes
-
     # if start == end.. +2 to result + recurse
-
     # else max(recurse1, recurse2)
 
     def _longestPalindromeSubseq(s, start, end):
@@ -24,7 +21,6 @@ def longestPalindromeSubseq(s):
     # I ran it and it's too slow, its runtime is factorial 2*n, but I am not sure exactly why
     # to be better next time, when I get stuck like this, go over the clues
     # hash - dp - sort - stack - queue - divide
-
 
 
 result = longestPalindromeSubseq("a")
