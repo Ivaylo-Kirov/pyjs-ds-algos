@@ -28,6 +28,14 @@ class BST:
             else:
                 self._addNode(startNode.right, data)
     
+    def _countNodes(self, node):
+        if node is None:
+            return 0
+        return (1 + self._countNodes(node.left) + self._countNodes(node.right))
+    
+    def countNodes(self):
+        return self._countNodes(self.root)
+
     def findMin(self):
         startNode = self.root
         while startNode.left is not None:
@@ -52,6 +60,8 @@ bst.addNode(2)
 bst.addNode(8)
 bst.addNode(4)
 bst.addNode(3)
+
+result = bst.countNodes()
 
 print(bst.findMin())
 
