@@ -1,11 +1,14 @@
 
 function arrayIntersection(nums1, nums2) {
     let result = [];
-    let uniques = new Set();
+    let uniques = new Set(nums1);
 
-    nums1.forEach(element => {
-        uniques.add(element);
-    });
+    // nums1.forEach(element => {
+    //     uniques.add(element);
+    // }); 
+    // there is probably a more elegant way to convert an array into a set
+    // research shows that I can pass the array directly to the Set constructor
+
     nums2.forEach(element => {
         if (uniques.has(element) && result.indexOf(element) == -1) {
             result.push(element);
