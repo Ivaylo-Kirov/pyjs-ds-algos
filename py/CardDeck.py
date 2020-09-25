@@ -14,7 +14,7 @@ class CardDeck:
     def __len__(self):
         return len(self._cards)
     
-    def __getitem__(self, position):
+    def __getitem__(self, position): # enabling __getitem__ allows indexing and slicing
         return self._cards[position]
 
 
