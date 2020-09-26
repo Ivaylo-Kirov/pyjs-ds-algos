@@ -19,6 +19,7 @@ def countDomains(L):
                 domain = domain[nextDotIndex+1:]
             else:
                 break
+        # good reminder of how close I was
 
     for m in resultD: # for each key, where m is the key (in this case it's the actual URL)
         tempStr = str(resultD[m])
