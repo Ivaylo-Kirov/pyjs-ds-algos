@@ -1,6 +1,6 @@
 
 s = "abcde"
-result = list(s)
+result = list(s) # one liner to convert a string into an array
 
 start = 0
 end = len(s) - 1
